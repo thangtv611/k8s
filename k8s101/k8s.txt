@@ -1,0 +1,30 @@
+What k8s used for?
+    - Scale the applications
+    - Roll out new updates
+    - 
+
+Components:
+    API Server:
+        - Acts like frontend for user to interact with k8s cluster
+        - Ways: CLI, API (web application), language's library
+        -> a way allow user interact and talk to k8s cluster
+    Etcd:
+        - Distributed Key-Value store
+        - Used by k8s to store all data used to manage the cluster (e.g: node's information)
+    Scheduler:
+        - Take responsible for distributing works/containers across multiple nodes
+        - it looks for newly created containers and assign them to nodes
+    Controller:
+        - Responsible for responding when nodes, containers or endpoint goes down
+        - Typical check the health and bring up new containers if some failed
+    Container Runtime:
+        - Is about underlying software that used to run the containers. Regarding to docker
+    Kubelet:
+        - Agents are run on each nodes in the cluster.
+        - Responsible for making sure that the containers are running on the nodes expected.
+
+
+Container runtime:
+    - Có thể hiểu là trên mỗi máy Node sẽ cài cắm các phần mềm để chạy các container
+    - Lấy ví dụ docker: nếu là máy thật thì phải cài docker, nếu là máy ảo thì cũng cài docker, đối với Minikube, mỗi node là một docker vậy thì sẽ có dockerdnd (docker trong docker)
+    
